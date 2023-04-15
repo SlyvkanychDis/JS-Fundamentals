@@ -18,8 +18,13 @@ alert(secondMeaning);
 
 /*4.Створіть об’єкт з 5-ма наступними властивостями: “String”, “Number”, “Boolean”, “Undefined”, “Null”. 
   Значення кожної властивості повинно відповідати відповідному примітивному типу даних.*/
-
-
+let myObj = new Object();
+myObj.productName = "Milk";
+myObj.count = 42;
+myObj.valid = true;
+myObj.telNumber;
+myObj.price = null;
+console.log(myObj);
 
 /*5.Використовуючи функцію confirm() задайте користувачу питання 
  про досягнення ним повнолітнього віку. Результат запишіть в змінну isAdult і виведіть в консоль.*/
