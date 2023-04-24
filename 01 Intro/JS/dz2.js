@@ -1,10 +1,10 @@
 /*1.Дано три цілих числа: a, b, c. Перевірте істинність висловлювання:
  a < b < c */
 let a = 2;
-let b = 4;
+let b = 5;
 let c = 10;
-console.log(`2< 4< 10 : ${a < b < c}`);
-console.log(`2> 4> 10 : ${a > b > c}`);//test
+console.log(`2< 5< 10 : ${a < b && b< c}`);
+console.log(`2> 5> 10 : ${a > b && b> c}`);//test
 
 //2.
 let x = 1;
@@ -74,4 +74,21 @@ if (
   } else {
     console.log("This is not right triangle");
   }
- 
+ //6.
+
+ let currDate = new Date();
+ let hours= currDate.getHours();
+if (hours >= 23 && hours < 5 ) {
+  console.log("доброї ночі");
+}else if (hours >= 5 && hours <= 11){
+  console.log("доброго ранку");
+}else if (hours > 11 && hours <= 17){
+  console.log("доброго дня");
+}else if (hours > 17 && hours <= 23){
+  console.log("доброго вечора");
+}else {
+  console.log("виникла помилка");
+}
+
+
+
