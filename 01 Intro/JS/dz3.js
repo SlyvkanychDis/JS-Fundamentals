@@ -30,22 +30,14 @@ console.log(sequenceNumbers(1,6));*/
 
 /*3.Напишіть функцію randArray(k), яка заповнюватиме масив k випадковими 
 цілими числами. Випадкові числа генеруються із діапазону 1-500.*/
-
-/*function randomInteger(){
-    let resultArray = [];
-    for( let i = 0; i<1; i++){
-        resultArray.push(randArray(min = 1,max = 500));
+function randArray() {
+    const res2 = [];
+    for (let n = 1; n <= 20; n++){
+   res2.push(Math.floor(Math.random() * (500 - 1) + 1));
     }
-    return resultArray;
-}
-console.log(randomInteger());
-
-function randArray (min = 1,max = 500){
-        let res2 = Math.floor(Math.random() * (max - min) + min);
-        return res2;
-    }
-      
-console.log(randArray());*/
+    return res2;
+ }
+console.log(randArray());
 
 /*8.
 let firstArray = [1, 2, 3, 5, 3];
