@@ -81,7 +81,20 @@ calc(10, 3, 1); // => 7*/
 }
 console.log(calc(10, 3, 2));*/
 
+/*7.Напишіть функцію findUnique(arr), яка приймає масив arr і перевіряє на 
+унікальність його елементи. Якщо всі елементи масиву унікальні (не мають дублів), то функція поверне true, 
+інакше - false.
+findUnique([1, 2, 3, 5, 3]);  // => false
+findUnique([1, 2, 3, 5, 11]); // => true*/
 
+function findUnique(arr){
+  for(let i = 0; i<arr.length; i++){
+    if (arr[i + 1] !== arr[i]){
+      return true;
+    }return false;
+  }
+}
+console.log(findUnique([1, 2, 3, 5]));
 
 /*8.
 let firstArray = [1, 2, 3, 5, 3];
