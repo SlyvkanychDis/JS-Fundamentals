@@ -39,15 +39,17 @@ console.log(sequenceNumbers(1,6));*/
  }
 console.log(randArray());*/
 
+
 /*4.Написати функцію compact() яка має приймати на вхід масив, а на вихід має 
 повертати значення нового масиву без повторень.
 приклад:
 const arr = [5, 3, 4, 5,6,7,3];
 const arr2 = compact(arr);
 console.log(arr2) ; // [5,3,4,6,7]*/
+
 /*const arr = [5,3,4,5,6,7,3];
-const arr2 = compact(arr);
-function compact (arr){
+  const arr2 = compact(arr);
+  function compact (arr){
   const arr2 = [];
   const tempArray =[...arr].sort();
   for (let i = 0; i<tempArray.length; i++){
@@ -62,6 +64,24 @@ console.log(arr2); *//*version 1*/
 /*const arr = [5, 3, 4, 5,6,7,3];
 const arr2 = [...new Set(arr)];
 console.log(arr2);*//*version 2*/
+
+
+/*6.
+Напишіть функцію calc(a, b, op), яка виконує над числами a і b одну із арифметичних операцій 
+та повертає її результат. Вид операції визначається цілим числом op: 1 – віднімання, 2 – добуток, 
+3 – ділення, інші значення – додавання.
+calc(10, 3, 1); // => 7*/
+/*function calc(a, b, op){
+  switch (op){
+    case 1: return a-b;
+    case 2: return a*b;
+    case 3: return a/b;
+    default: return a+b;
+  }
+}
+console.log(calc(10, 3, 2));*/
+
+
 
 /*8.
 let firstArray = [1, 2, 3, 5, 3];
