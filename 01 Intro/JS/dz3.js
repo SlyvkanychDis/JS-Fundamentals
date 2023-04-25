@@ -59,6 +59,8 @@ console.log(arr2) ; // [5,3,4,6,7]*/
   }return arr2;
 }
 console.log(arr2); *//*version 1*/
+
+
 /*5.Є масив [5, “Limit”, 12, “a”, “3”, 99, 2, [2, 4, 3, “33”, “a”, “text”], “strong”, “broun”]
 Написати функцію яка виведе нові масиви які складаються із даних початкового масиву, але 
 одного типу даних (не приводити тип стрінг в число навіть якщо там лише число)
@@ -108,14 +110,11 @@ console.log(calc(10, 3, 2));*/
 findUnique([1, 2, 3, 5, 3]);  // => false
 findUnique([1, 2, 3, 5, 11]); // => true*/
 
-function findUnique(arr){
-  for(let i = 0; i<arr.length; i++){
-    if (arr[i + 1] !== arr[i]){
-      return true;
-    }return false;
-  }
-}
-console.log(findUnique([1, 2, 3, 5]));
+function findUnique(arr) {
+  const unique = new Set(arr); 
+  return unique.size === arr.length; 
+} 
+  console.log(findUnique([1, 2, 3, 2]));
 
 /*8.
 let firstArray = [1, 2, 3, 5, 3];
