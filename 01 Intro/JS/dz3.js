@@ -59,7 +59,28 @@ console.log(arr2) ; // [5,3,4,6,7]*/
   }return arr2;
 }
 console.log(arr2); *//*version 1*/
-
+/*5.Є масив [5, “Limit”, 12, “a”, “3”, 99, 2, [2, 4, 3, “33”, “a”, “text”], “strong”, “broun”]
+Написати функцію яка виведе нові масиви які складаються із даних початкового масиву, але 
+одного типу даних (не приводити тип стрінг в число навіть якщо там лише число)
+let  arr = [5, “Limit”, 12, “a”, “3”, 99, 2, [2, 4, 3, “33”, “a”, “text”], “strong”, “broun”];
+let arrNew = funcName(arr);*/
+/* 
+[
+[5, 12, 99, 2, 2, 4, 3],
+[”Limit”, “a”, “3”, “33”, “a”, “text”, “strong”, “broun”
+] 
+*/
+let  arr = [5, "Limit", 12,"a", "3", 99, 2, [2, 4, 3, "33", "a", "text"], "strong", "broun"];
+function funcName(arr) {
+  const arrNew = [];
+  const types = new Set(arr.map((item) => typeof item));
+  types.forEach((type) => {
+    const newArr = arr.filter((item) => typeof item === type);
+    arrNew.push(newArr);
+  });
+  return arrNew;
+}
+console.log(funcName(arr));
 
 /*const arr = [5, 3, 4, 5,6,7,3];
 const arr2 = [...new Set(arr)];
