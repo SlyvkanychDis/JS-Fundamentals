@@ -68,4 +68,26 @@
   }
   checkAge();*/
 
+  /*3.  Реалізуйте функцію calcRectangleArea(width, height), яка приймає 2 параметри ширина 
+  прямокутника width і висота прямокутника height і обраховує його площу. Передбачити припинення виконання програми
+   і генерацію винятку у випадку, якщо функції передано не числові параметри.
+  Напишіть код, який використовує цю функцію та обробляє можливі виняткові ситуації.*/ 
+
+  /*function calcRectangleArea(width, height) {
+    let firstNum = +prompt ("fill in number first");
+    let secondNum = +prompt ("fill in number second");
+    let result = firstNum * secondNum;
+    try{
+        if (isNaN(firstNum) || isNaN(secondNum) ){
+            throw new TypeError ('please, fill in number');
+        }
+        if (firstNum <= 0 || secondNum <=0){
+            throw new RangeError ('you filled 0 or number lower 0');
+        }
+    }catch (error) {
+        alert(`Error: ${error.name}. ${error.message}`);
+  }
+   alert(`the area of the rectangle is equal to: ${result} !!!`);
+}
+  calcRectangleArea();*/
   
