@@ -72,6 +72,7 @@ let arrNew = funcName(arr);*/
 [”Limit”, “a”, “3”, “33”, “a”, “text”, “strong”, “broun”
 ] 
 */
+
 let  arr = [5, "Limit", 12,"a", "3", 99, 2, [2, 4, 3, "33", "a", "text"], "strong", "broun"];
 function funcName(arr) {
   const arrNew = [];
