@@ -15,7 +15,7 @@
       if (first >= arr.length || second >= arr.length) {
       throw new Error("Номер елементу перевищує розмір масиву!");
     }
-      return arr[first] + arr[second];
+      return arr[first-1] + arr[second-1];
   }
     try {
     const myArray = [1, 2, 3, 4, 5];
@@ -25,8 +25,8 @@
     console.log(wrongResult);
   } catch (error) {
     console.error(error.message);
-  }
-  */
+  }*/
+  
 
   /*2.Створіть функцію checkAge(), яка запитує у користувача його ім'я, вік та статус 
   (адмін, модератор, користувач) та генерує модальне вікно з помилкою, якщо:вік користувача менше 
@@ -73,12 +73,12 @@
    і генерацію винятку у випадку, якщо функції передано не числові параметри.
   Напишіть код, який використовує цю функцію та обробляє можливі виняткові ситуації.*/ 
 
-  /*function calcRectangleArea(width, height) {
+ /* function calcRectangleArea(width, height) {
     let firstNum = +prompt ("fill in number first");
     let secondNum = +prompt ("fill in number second");
     let result = firstNum * secondNum;
     try{
-        if (isNaN(firstNum) || isNaN(secondNum) {
+        if (isNaN(firstNum) || isNaN(secondNum)) {
             throw new TypeError ('please, fill in number');
         }
         if (firstNum <= 0 || secondNum <=0){
@@ -102,24 +102,28 @@
   console.log(showMonthName(5));  // May
   console.log(showMonthName(14)); // MonthException Incorrect month number */
 
-  /*function  showMonthName(month) {
-    const date = new Date();
-    date.setMonth(month - 1);
-    try {
-        if (month <= 0 || month >= 13) {
-            throw new RangeError ('fill in correct months/number')
-
-        }
-    }catch (error) {
-        alert(`Error: ${error.name}. ${error.message}`);
-  
-    
+ class MonthException {
+  constructor(message){
+    this.message = message;
+    this.name = 'MonthException';
   }
-  return date.toLocaleString('en-US', { month: 'long' });
+ }
+function showMonthName(month) {
+  month = month - 1; //array month
+  let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  if(months[month] !== undefined){
+    return months[month];
+  }else {
+    throw new MonthException('Incorrect months number');
+  }
 }
-console.log(showMonthName(12));
-*/
-
+try{
+  let myMonth = 8;
+  let monthName = showMonthName(myMonth);
+  console.log(monthName);
+}catch (e){
+  console.log(e.name, e.message);
+}
   
   /*5.Реалізуйте функцію showUser(id), яка приймає параметром користувацьке id і повертає об’єкт, який містить значення переданої id. 
   Також функція викидає помилку у разі якщо введено від’ємне id.  Реалізуйте функцію showUsers(ids), яка приймає параметром масив користувацьких айді ids, 
