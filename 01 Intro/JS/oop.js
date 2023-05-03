@@ -174,29 +174,30 @@ class Student extends Person {
           }
         }
         
-        const worker1 = new Worker('John Smith', 20, 23);
-        const worker2 = new Worker('Tom Tomson', 48, 22);
-         const worker3 = new Worker('Andy Ander', 29, 23);
-worker1.showSalary();
-console.log("New experience: " + worker1._experience);
-worker1.showSalaryWithExperience();
-worker1.experience = 1.5;
-console.log("New experience: " + worker1.experience);
-worker1.showSalaryWithExperience();
+    const worker1 = new Worker('John Smith', 20, 23);
+    const worker2 = new Worker('Tom Tomson', 48, 22);
+    const worker3 = new Worker('Andy Ander', 29, 23);
+    
+    worker1.showSalary();
+    console.log("New experience: " + worker1.experience);
+    worker1.showSalaryWithExperience();
+    worker1.experience = 1.5;
+    console.log("New experience: " + worker1.experience);
+    worker1.showSalaryWithExperience();
 
-console.log(worker2.fullName);
-worker2.showSalary();
-console.log("New experience: " + worker2.experience);
-worker2.showSalaryWithExperience();
-worker2.experience = 5;
-console.log("New experience: " + worker2.experience);
-worker2.showSalaryWithExperience();
+    console.log(worker2.fullName);
+    worker2.showSalary();
+    console.log("New experience: " + worker2.experience);
+    worker2.showSalaryWithExperience();
+    worker2.experience = 5;
+    console.log("New experience: " + worker2.experience);
+    worker2.showSalaryWithExperience();
 
-console.log(worker3.fullName);
-worker3.showSalary();
-console.log("New experience: " + worker3.experience);
-worker3.showSalaryWithExperience();
-worker3.experience = 3;
-console.log("New experience: " + worker3.experience);
-worker3.showSalaryWithExperience();
+    console.log(worker3.fullName);
+    worker3.showSalary();
+    console.log("New experience: " + worker3.experience);
+    worker3.showSalaryWithExperience();
+    worker3.experience = 3;
+    console.log("New experience: " + worker3.experience);
+    worker3.showSalaryWithExperience();
 
