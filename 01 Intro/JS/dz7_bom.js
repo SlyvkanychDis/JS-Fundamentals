@@ -87,3 +87,65 @@ myButton.addEventListener('mouseover', function() {
 myButton.addEventListener('mouseout', function() {
   message.textContent += 'Mouse is not on me!';
 });
+
+/*6.Реалізуйте програму, яка відслідковуватиме зміну розміру (ширини і висоти) вікна 
+браузера і виводитиме на поточну сторінку при її розтязі/стисканні відповідні значення.*/
+
+const widthElement = document.getElementById('width');
+const heightElement = document.getElementById('height');
+    widthElement.innerText = window.innerWidth;
+    heightElement.innerText = window.innerHeight;
+window.addEventListener('resize', function(event) {
+    const newWidth = window.innerWidth;
+    const newHeight = window.innerHeight;
+        widthElement.innerText = newWidth;
+        heightElement.innerText = newHeight;
+});
+
+/*7.На сторінці потрібно реалізувати 2 випадаючих списки. У першому містяться назви країн,
+ у другому – назви міст. Реалізувати роботу таким чином, щоб коли вибирається з лівого 
+ випадаючого списку певна країна - в правому випадаючому  списку з'являлися міста цієї країни. 
+ Список міст формується динамічно, через JavaScript. Також потрібно нижче вивести назву обраної країни і місто.
+Код HTML-сторінки:
+<select name="country" id="country">
+        <option value="ger">Germany</option>
+        <option value="usa">USA</option>
+        <option value="ukr">Ukraine</option>
+</select>
+                    
+<select name="cities" id="cities"></select>
+<p></p>*/
+
+const countrySelect = document.getElementById("country");
+const citySelect = document.getElementById("cities");
+const resultEl = document.querySelector("p");
+const citiesByCountry = {
+  ger: ["Berlin", "Munich", "Frankfurt"],
+  usa: ["New York", "Los Angeles", "Chicago"],
+  ukr: ["Kyiv", "Lviv", "Odessa"]
+};
+countrySelect.addEventListener("change", function() {
+  citySelect.innerHTML = "";
+  const selectedCountry = this.value;
+  const cities = citiesByCountry[selectedCountry];
+  for (let i = 0; i < cities.length; i++) {
+    const option = document.createElement("option");
+    option.text = cities[i];
+    citySelect.add(option);
+  }
+  resultEl.textContent = `Ви обрали країну ${this.options[this.selectedIndex].text} та місто ${citySelect.options[citySelect.selectedIndex].text}`;
+});
+citySelect.addEventListener("change", function() {
+  resultEl.textContent = `Ви обрали країну ${countrySelect.options[countrySelect.selectedIndex].text} та місто ${this.options[this.selectedIndex].text}`;
+});
+
+
+
+
+
+
+
+
+
+
+
