@@ -30,13 +30,26 @@ $(document).ready(function() {
    <div>text1</div>
    <h3>header2</h3>
    <div>text2</div>*/
-   
+
    $(document).ready(function() {
     let headers = $("h3");
     headers.each(function() {
       let nextDiv = $(this).next("div");
       if (nextDiv.length > 0) {
         nextDiv.insertBefore($(this));
+      }
+    });
+  });
+
+/*4.На HTML-сторінці є 6 чекбоксів. Напишіть скріпт, який після того, як користувач позначив будь-які 3 чекбокси, всі чекбокси робить неактивними.*/
+$(document).ready(function() {
+    let checkboxes = $("input[type='checkbox']");
+    checkboxes.change(function() {
+      let selectedCheckboxes = checkboxes.filter(":checked");
+      if (selectedCheckboxes.length >= 3) {
+        checkboxes.not(":checked").prop("disabled", true);
+      } else {
+        checkboxes.prop("disabled", false);
       }
     });
   });
