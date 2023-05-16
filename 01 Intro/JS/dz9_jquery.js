@@ -1,6 +1,42 @@
+/*1.Для заданої сторінки знайдіть всі <h2> з класом head, зробіть для них зелений колір фону, потім серед 
+знайдених елементів знайдіть елементи з класом inner і поставте їм розмір шрифту 35px.
+<h2 class="head">header1</h2>
+<h2 class="head">header2 <span class="inner">inner elem1</span></h2>
+<h2>header3</h2>
+<h2 class="head">header4<span>inner elem2</span></h2>
+<h2>header5</h2>*/
+
 $(document).ready(function() {
-    var headers = $("h2.head");
+    let headers = $("h2.head");
       headers.css("background-color", "green");
-      var innerElements = headers.find(".inner");
+      let innerElements = headers.find(".inner");
     innerElements.css("font-size", "35px");
+  });
+
+  /*2. На HTML-сторінці є посилання <a>. У випадку коли, href починається на https://, потрібно додати посиланню атрибут target="_blank".*/
+
+  $(document).ready(function() {
+    let links = $("a");
+    links.each(function() {
+      let href = $(this).attr("href");
+      if (href && href.startsWith("https://")) {
+        $(this).attr("target", "_blank");
+      }
+    });
+  }); 
+
+  /*3.Знайдіть теги <div>, які стоять безпосередньо після <h3> і перемістіть кожен <div>-елемент так, щоб він став безпосередньо над <h3>.
+   <h3>header1</h3>
+   <div>text1</div>
+   <h3>header2</h3>
+   <div>text2</div>*/
+   
+   $(document).ready(function() {
+    let headers = $("h3");
+    headers.each(function() {
+      let nextDiv = $(this).next("div");
+      if (nextDiv.length > 0) {
+        nextDiv.insertBefore($(this));
+      }
+    });
   });
