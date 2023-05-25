@@ -45,6 +45,22 @@ function mul(/* ваш код *//*) {
 console.log(mul(1, "str", 2, 3, true)); // 6
 console.log(mul(null, "str", false, true)); // 0*/
 
+function mul(...params) {
+  let result = 0;
+  let hasNumber = false;
+
+  for (const param of params) {
+    if (typeof param === 'number') {
+      result += param;
+      hasNumber = true;
+    }
+  }
+
+  return hasNumber ? result : 0;
+};
+console.log(mul(1, "str", 2, 3, true)); // 6
+console.log(mul(null, "str", false, true)); // 0*/
+
 
 
 /*4.Напишіть функцію mapBuilder (keysArray, valuesArrays), яка приймає 
@@ -72,3 +88,4 @@ const map = new Map();
   let map = mapBuilder(keys, values);
   console.log(map.size); // 4
   console.log(map.get(2)); // "span"
+
