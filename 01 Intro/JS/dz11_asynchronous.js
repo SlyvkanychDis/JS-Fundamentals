@@ -114,5 +114,5 @@ async function showNumbers() {
     console.log(i);
   }
 }
-
 showNumbers();
+
